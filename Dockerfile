@@ -1,6 +1,6 @@
 FROM tomcat:8.5-jre10
 MAINTAINER Karl Dahlgren <karl.dahlgren@castlemock.com>
-
+RUN useradd --no-log-init -r -g castlemock castlemock
 USER castlemock
 
 # Change directory to Tomcat webapps folder and download the latest Castle Mock war file
