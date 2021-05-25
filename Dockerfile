@@ -1,5 +1,6 @@
 FROM tomcat:8.5-jdk11-openjdk
 MAINTAINER Karl Dahlgren <karl.dahlgren@castlemock.com>
+RUN usergroup add castlemock
 RUN useradd --no-log-init -r -g castlemock castlemock
 USER castlemock
 
