@@ -10,7 +10,7 @@ RUN rm -rf /usr/local/tomcat/webapps/host-manager
 
 RUN useradd castlemock -g 0 
 RUN usermod -g root -G 0 castlemock && mkdir /home/castlemock
-RUN chown -R castlemock:0 /tomcat/tomcat && chown -R castlemock:0 /home/castlemock
+RUN chown -R castlemock:0 /usr/local/tomcat && chown -R castlemock:0 /home/castlemock
 RUN mkdir /usr/local/tomcat/castlemock && chown -R castlemock:0 /usr/local/tomcat/castlemock
 
 # Change directory to Tomcat webapps folder and download the latest Castle Mock war file
